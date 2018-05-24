@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div>
+    <h3>this is a radio page</h3>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'App'
+      
   }
 
 </script>
 
-<style>
+<style scoped>
 
 
 </style>
