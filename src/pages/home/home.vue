@@ -3,7 +3,6 @@
     <nav class="head_nav">
       <router-link class="nav_link" to="/home/recommend">推荐</router-link>
       <router-link class="nav_link" to="/home/friend">朋友</router-link>
-
       <router-link class="nav_link" to="/home/radio">电台</router-link>
 
     </nav>

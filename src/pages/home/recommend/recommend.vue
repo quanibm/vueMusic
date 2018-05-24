@@ -1,55 +1,39 @@
 <template>
-  <div>
-    <div class="slideshow-box">
-      <div class="slideshow-items">
-        <div class="slideshow-list"></div>
-        <div class="slideshow-list"></div>
-        <div class="slideshow-list"></div>
-        <div class="slideshow-list"></div>
-        <div class="slideshow-list"></div>
+  <div class="recommend">
+    <div class="container-box">
+      <slide-show></slide-show>
 
-      </div>
     </div>
-
-
-
-
-
-
-
-
   </div>
 </template>
 
 <script>
+  import slide from '../../slide/slide.vue'
 
 
+
+  import {
+    mapActions,
+    mapState
+  } from "vuex";
   export default {
+    components: {
+      slideShow: slide,
 
-  }
+    },
+
+  };
 
 </script>
 
 <style lang="less" scoped>
-  .slideshow-box {
-    background: #D33A31;
+  .recommend {
+    background: #d33a31;
     width: 100%;
     height: 6rem;
-    .slideshow-items {
-      background: rgba(0, 0, 0, 0);
-      height: 8rem;
-      display: flex;
-      width: 1180vw;
 
-
-      .slideshow-list {
-        background: pink;
-        width: 95vw;
-        height: 9rem;
-        margin: 0 .6rem;
-        border-radius: 0.2rem;
-      }
-    }
   }
+
+  .container-box {}
 
 </style>

@@ -5,13 +5,18 @@ import App from './App'
 import router from './router'
 import store from './store'
 import Vuex from 'vuex'
-import MintUI from 'mint-ui'
 import "./style/style.less"
+import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+Vue.use(MintUI)
 
 Vue.use(Vuex)
 Vue.config.productionTip = false
+
+
+
+
 
 
 const stores = new Vuex.Store(
@@ -23,7 +28,9 @@ const stores = new Vuex.Store(
 new Vue({
   el: '#app',
   router,
-  store:stores,
-  components: { App },
+  store: stores,
+  components: {
+    App
+  },
   template: '<App/>'
 })

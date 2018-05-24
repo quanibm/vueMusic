@@ -1,3 +1,6 @@
+const CHANGEBANNER = "CHANGEBANNER"
+
+
 const mutations = {
   changeNav(state) {
 
@@ -7,12 +10,11 @@ const mutations = {
       state.tagNavValue = true;
     }
 
-
-
-
-
-
+  },
+  [CHANGEBANNER](state, data) {
+    state.banner.push(data)
   }
+
 
 }
 

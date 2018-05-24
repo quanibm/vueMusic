@@ -3,8 +3,8 @@ import actions from './actions'
 
 
 const state = {
-  "tagNavValue": false
-
+  "tagNavValue": false,
+  "banner": []
 }
 
 
