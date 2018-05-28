@@ -96,13 +96,14 @@ export default {
   position: relative;
   margin: 0 auto;
   width: 96%;
-  height: 11.25rem /* 180/16 */;
+  height: 12.25rem /* 180/16 */;
   overflow: hidden;
   .slide-img {
     width: 100%;
     img {
       width: 100%;
       height: 100%;
+      border-radius: .3125rem /* 5/16 */;
       position: absolute;
       top: 0;
     }

@@ -5,6 +5,14 @@
 ## Build Setup
 
 ``` bash
+//下载后端接口
+git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
+//下载后端依赖
+npm install   或者使用    yarn
+//运行node入口文件
+node app.js
+//下载前端文件
+https://github.com/zengibm/vueMusic.git
 # install dependencies
 npm install
 
