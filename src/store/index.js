@@ -4,7 +4,8 @@ import actions from './actions'
 
 const state = {
   "tagNavValue": false,
-  "banner": []
+  "banner": [],
+  "Pesonalized": []
 }
 
 

@@ -1,18 +1,26 @@
 const CHANGEBANNER = "CHANGEBANNER"
-
+const SAVEPESONALIZED = "SAVEPESONALIZED"
 
 const mutations = {
-  changeNav(state) {
+  changeNav ( state )
+  {
 
-    if (state.tagNavValue) {
+    if ( state.tagNavValue )
+    {
       state.tagNavValue = false;
-    } else {
+    } else
+    {
       state.tagNavValue = true;
     }
 
   },
-  [CHANGEBANNER](state, data) {
-    state.banner.push(data)
+  [ CHANGEBANNER ] ( state, data )
+  {
+    state.banner.push( data )
+  },
+  [ SAVEPESONALIZED ] ( state, data )
+  {
+    state.Pesonalized.push( data )
   }
 
 

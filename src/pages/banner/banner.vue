@@ -41,6 +41,10 @@ export default {
       isShow: true
     };
   },
+  created() {
+    console.log(this.banners);
+    
+  },
   computed: {
     prevIndex() {
       if (this.nowIndex === 0) {
@@ -103,7 +107,7 @@ export default {
     img {
       width: 100%;
       height: 100%;
-      border-radius: .3125rem /* 5/16 */;
+      border-radius: 0.3125rem /* 5/16 */;
       position: absolute;
       top: 0;
     }
@@ -120,13 +124,13 @@ export default {
     display: inline-block;
     width: 1rem /* 10/16 */;
     height: 1rem /* 10/16 */;
-    margin: .2rem;
+    margin: 0.2rem;
     border-radius: 50%;
     background: #c0c0c0;
-    .on{
+    .on {
       display: block;
       width: 100%;
-      height: 100%;      
+      height: 100%;
       border-radius: 50%;
       background-color: #ff3333;
     }

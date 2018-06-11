@@ -2,49 +2,33 @@
   <div class="recommend">
     <div class="container-box">
       <div class="slider-wrapper">
-        <slider-show :banners="banner[0].data.banners"></slider-show>
+        <slider-show v-cloak :banners="banner[0].data.banners"></slider-show>
       </div>
       <div class="recommend-list">
         <ul>
           <li v-for="(item , index) in recommendList" @click="tagLinkShow(index)">
             <router-link to="" class="list-link linkToFm">
               <img :src="item.src1">
-              <img :src="item.src2" v-if="!linkShow === index">
+              <!-- <img :src="item.src2" v-if="!(linkShow === index)"> -->
             </router-link>
             <span> {{item.title}} </span>
           </li>
-          <!-- <li>
-            <router-link to="" class="list-link linkToRe">
-              <img src="../../../files/imgs/b21.png" alt="">
-            </router-link>
-            <span>每日推荐</span>
-          </li>
-          <li>
-            <router-link to="" class="list-link linkToSl">
-              <img src="../../../files/imgs/b31.png" alt="">
-            </router-link>
-            <span>歌单</span>
-          </li>-->
-
-          <!-- // <li>
-          //   <router-link to="" class="list-link linkToRl">
-          //     <img src="../../../files/imgs/b41.png" alt="">
-          //   </router-link>
-          //   <span>排行榜</span>
-          // </li>  -->
         </ul>
       </div>
+      <song-list></song-list>
     </div>
   </div>
 </template>
 
 <script>
 import banner from "../../banner/banner.vue";
+import songList from "../../songList/songList.vue";
 import { mapActions, mapState } from "vuex";
 
 export default {
   components: {
-    sliderShow: banner
+    sliderShow: banner,
+    songList
   },
   computed: {
     ...mapState(["banner"])
@@ -52,11 +36,9 @@ export default {
   methods: {
     ...mapActions(["getBanner"]),
     tagLinkShow(index) {
-      console.log(linkShow);
-      
       this.linkShow = index;
       setTimeout(() => {
-        this.linkShow = "";
+        this.linkShow = 0;
       }, 200);
     }
   },
@@ -87,13 +69,16 @@ export default {
           title: "排行榜"
         }
       ],
-      linkShow: ""
+      linkShow: 0
     };
   }
 };
 </script>
 
 <style lang="less" scoped>
+[v-cloak]{
+  display: none;
+}
 .recommend {
   background: #d33a31;
   width: 100%;
@@ -102,6 +87,8 @@ export default {
 .recommend-list {
   width: 96%;
   margin: 0 auto;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #c0c1bf;
   ul {
     display: flex;
     justify-content: space-around;
